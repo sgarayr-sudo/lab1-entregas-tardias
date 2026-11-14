@@ -1,0 +1,80 @@
+{
+  "laboratorio": "S14",
+  "id_estudiante": "15",
+  "semilla": 1015,
+  "timestamp_utc": "2026-11-14T17:46:21.303761+00:00",
+  "huella_muestra": "3a3850581b9f",
+  "n_train": 24500,
+  "n_valid": 5250,
+  "n_test": 5250,
+  "umbral": 0.5,
+  "class_weight": "balanced",
+  "costo_fp_brl": 8,
+  "costo_fn_brl": 35,
+  "pca": {
+    "variables_numericas_iniciales": 24,
+    "componentes_90pct": 15,
+    "varianza_explicada_pct": 90.48951601209026
+  },
+  "experimentos": [
+    {
+      "experimento": "A. Referencia (sin PCA, C=1.0)",
+      "accuracy": 0.669524,
+      "precision": 0.126287,
+      "recall": 0.654494,
+      "f1": 0.211722,
+      "average_precision": 0.150793,
+      "TN": 3282,
+      "FP": 1612,
+      "FN": 123,
+      "TP": 233,
+      "costo_BRL": 17201
+    },
+    {
+      "experimento": "B. PCA 90 %, C=1.0",
+      "accuracy": 0.648762,
+      "precision": 0.115702,
+      "recall": 0.629213,
+      "f1": 0.195462,
+      "average_precision": 0.128056,
+      "TN": 3182,
+      "FP": 1712,
+      "FN": 132,
+      "TP": 224,
+      "costo_BRL": 18316
+    },
+    {
+      "experimento": "C. PCA 90 %, C=0.1",
+      "accuracy": 0.65181,
+      "precision": 0.117066,
+      "recall": 0.632022,
+      "f1": 0.197542,
+      "average_precision": 0.128411,
+      "TN": 3197,
+      "FP": 1697,
+      "FN": 131,
+      "TP": 225,
+      "costo_BRL": 18161
+    },
+    {
+      "experimento": "D. PCA 90 %, C=10.0",
+      "accuracy": 0.649905,
+      "precision": 0.11646,
+      "recall": 0.632022,
+      "f1": 0.196678,
+      "average_precision": 0.127973,
+      "TN": 3187,
+      "FP": 1707,
+      "FN": 131,
+      "TP": 225,
+      "costo_BRL": 18241
+    }
+  ],
+  "mejor_modelo_por_costo": "A. Referencia (sin PCA, C=1.0)",
+  "ks_valor_flete": {
+    "D": 0.010340136054421745,
+    "p_valor": 0.7402141145083747,
+    "alfa": 0.05,
+    "decision": "No se rechaza H0 al 5 %"
+  }
+}
